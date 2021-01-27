@@ -37,6 +37,7 @@ type File struct {
 	file_type_files *int
 	group_files     *int
 	user_files      *int
+	loadedFKs       [3]bool
 }
 
 // FileEdges holds the relations/edges for other nodes in the graph.
@@ -236,6 +237,36 @@ func (f *File) String() string {
 	builder.WriteString(fmt.Sprintf("%v", f.Op))
 	builder.WriteByte(')')
 	return builder.String()
+}
+
+// OwnerID returns the foreign-key value of the "owner" edge.
+// An error is returned if the foreign-key column was not loaded by the query or was not found.
+func (f *File) OwnerID() (id int, err error) {
+	if f.user_files != nil {
+		id = *f.user_files
+		return
+	}
+	if !f.loadedFKs[2] {
+		err = &NotLoadedError{edge: "owner field"}
+	} else {
+		err = &NotFoundError{label: "owner"}
+	}
+	return
+}
+
+// TypeID returns the foreign-key value of the "type" edge.
+// An error is returned if the foreign-key column was not loaded by the query or was not found.
+func (f *File) TypeID() (id int, err error) {
+	if f.file_type_files != nil {
+		id = *f.file_type_files
+		return
+	}
+	if !f.loadedFKs[0] {
+		err = &NotLoadedError{edge: "type field"}
+	} else {
+		err = &NotFoundError{label: "type"}
+	}
+	return
 }
 
 // Files is a parsable slice of File.

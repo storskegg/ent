@@ -30,6 +30,7 @@ type Pet struct {
 	Edges     PetEdges `json:"edges"`
 	user_pets *int
 	user_team *int
+	loadedFKs [2]bool
 }
 
 // PetEdges holds the relations/edges for other nodes in the graph.
@@ -177,6 +178,36 @@ func (pe *Pet) String() string {
 	builder.WriteString(fmt.Sprintf("%v", pe.UUID))
 	builder.WriteByte(')')
 	return builder.String()
+}
+
+// TeamID returns the foreign-key value of the "team" edge.
+// An error is returned if the foreign-key column was not loaded by the query or was not found.
+func (pe *Pet) TeamID() (id int, err error) {
+	if pe.user_team != nil {
+		id = *pe.user_team
+		return
+	}
+	if !pe.loadedFKs[1] {
+		err = &NotLoadedError{edge: "team field"}
+	} else {
+		err = &NotFoundError{label: "team"}
+	}
+	return
+}
+
+// OwnerID returns the foreign-key value of the "owner" edge.
+// An error is returned if the foreign-key column was not loaded by the query or was not found.
+func (pe *Pet) OwnerID() (id int, err error) {
+	if pe.user_pets != nil {
+		id = *pe.user_pets
+		return
+	}
+	if !pe.loadedFKs[0] {
+		err = &NotLoadedError{edge: "owner field"}
+	} else {
+		err = &NotFoundError{label: "owner"}
+	}
+	return
 }
 
 // Pets is a parsable slice of Pet.

@@ -25,6 +25,7 @@ type Node struct {
 	// The values are being populated by the NodeQuery when eager-loading is set.
 	Edges     NodeEdges `json:"edges"`
 	node_next *int
+	loadedFKs [1]bool
 }
 
 // NodeEdges holds the relations/edges for other nodes in the graph.
@@ -151,6 +152,21 @@ func (n *Node) String() string {
 	builder.WriteString(fmt.Sprintf("%v", n.Value))
 	builder.WriteByte(')')
 	return builder.String()
+}
+
+// PrevID returns the foreign-key value of the "prev" edge.
+// An error is returned if the foreign-key column was not loaded by the query or was not found.
+func (n *Node) PrevID() (id int, err error) {
+	if n.node_next != nil {
+		id = *n.node_next
+		return
+	}
+	if !n.loadedFKs[0] {
+		err = &NotLoadedError{edge: "prev field"}
+	} else {
+		err = &NotFoundError{label: "prev"}
+	}
+	return
 }
 
 // Nodes is a parsable slice of Node.

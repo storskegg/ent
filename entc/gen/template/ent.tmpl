@@ -111,6 +111,8 @@ func ({{ $receiver }} *{{ $.Name }}) Unwrap() *{{ $.Name }} {
 
 {{ template "model/stringer" $ }}
 
+{{ template "model/additional" $ }}
+
 {{ $slice := plural $.Name }}
 // {{ $slice }} is a parsable slice of {{ $.Name }}.
 type {{ $slice }} []*{{ $.Name }}
@@ -138,7 +140,7 @@ func ({{ $receiver }} {{ $slice }}) config(cfg config) {
 		builder.WriteString(fmt.Sprintf("id=%v", {{ $receiver }}.ID))
 		{{- range $i, $f := $.Fields }}
 			{{- if $f.Sensitive }}
-				builder.WriteString(", {{ $f.Name }}=<sensitive>")
+				builder.WriteString(", {{ $f.Name }}={{ print "<sensitive>" }}")
 			{{- else }}
 				{{- $sf := printf "%s.%s" $receiver $f.StructField }}
 				{{- if $f.Nillable }}
@@ -176,4 +178,19 @@ func ({{ $receiver }} {{ $slice }}) config(cfg config) {
 {{ define "model/omittags" }}{{ with $.TagTypes }}`{{ range $i, $t := . }}{{ if ne $i 0 }} {{ end }}{{ $t }}:"-"{{ end }}`{{ end }}{{ end }}
 
 {{/* A template that can be overridden in order to add additional fields to the each type.*/}}
-{{ define "model/fields/additional" }}{{end}}
+{{ define "model/fields/additional" }}{{ end }}
+
+{{/* A template for adding additional methods or helpers for the generated model.*/}}
+{{ define "model/additional" }}
+	{{- with $tmpls := matchTemplate "model/additional/*"  }}
+		{{- range $tmpl := $tmpls }}
+			{{- xtemplate $tmpl $ }}
+		{{- end }}
+	{{- end }}
+
+	{{- with $tmpls := matchTemplate (printf "dialect/%s/model/additional/*" $.Storage) }}
+		{{- range $tmpl := $tmpls }}
+			{{- xtemplate $tmpl $ }}
+		{{- end }}
+	{{- end }}
+{{ end }}

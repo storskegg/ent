@@ -33,6 +33,7 @@ type Card struct {
 	// The values are being populated by the CardQuery when eager-loading is set.
 	Edges     CardEdges `json:"card_edges" mashraki:"edges"`
 	user_card *int
+	loadedFKs [1]bool
 
 	// StaticField defined by templates.
 	StaticField string `json:"boring,omitempty"`
@@ -185,6 +186,21 @@ func (c *Card) String() string {
 	builder.WriteString(c.Name)
 	builder.WriteByte(')')
 	return builder.String()
+}
+
+// OwnerID returns the foreign-key value of the "owner" edge.
+// An error is returned if the foreign-key column was not loaded by the query or was not found.
+func (c *Card) OwnerID() (id int, err error) {
+	if c.user_card != nil {
+		id = *c.user_card
+		return
+	}
+	if !c.loadedFKs[0] {
+		err = &NotLoadedError{edge: "owner field"}
+	} else {
+		err = &NotFoundError{label: "owner"}
+	}
+	return
 }
 
 // Cards is a parsable slice of Card.

@@ -734,6 +734,20 @@ func (uq *UserQuery) sqlAll(ctx context.Context) ([]*User, error) {
 		node.Edges.loadedTypes = loadedTypes
 		return node.assignValues(columns, values)
 	}
+	var loadedFKs [3]bool
+	for i := range _spec.Node.Columns {
+		switch _spec.Node.Columns[i] {
+		case user.ForeignKeys[0]:
+			loadedFKs[0] = true
+		case user.ForeignKeys[1]:
+			loadedFKs[1] = true
+		case user.ForeignKeys[2]:
+			loadedFKs[2] = true
+		}
+	}
+	for i := range nodes {
+		nodes[i].loadedFKs = loadedFKs
+	}
 	if err := sqlgraph.QueryNodes(ctx, uq.driver, _spec); err != nil {
 		return nil, err
 	}
@@ -1274,6 +1288,12 @@ func (uq *UserQuery) sqlQuery(ctx context.Context) *sql.Selector {
 		selector.Limit(*limit)
 	}
 	return selector
+}
+
+// WithFKs configure the query to load the entities with their foreign-key columns.
+func (uq *UserQuery) WithFKs() *UserQuery {
+	uq.withFKs = true
+	return uq
 }
 
 // UserGroupBy is the group-by builder for User entities.

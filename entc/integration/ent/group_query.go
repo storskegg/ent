@@ -481,6 +481,16 @@ func (gq *GroupQuery) sqlAll(ctx context.Context) ([]*Group, error) {
 		node.Edges.loadedTypes = loadedTypes
 		return node.assignValues(columns, values)
 	}
+	var loadedFKs [1]bool
+	for i := range _spec.Node.Columns {
+		switch _spec.Node.Columns[i] {
+		case group.ForeignKeys[0]:
+			loadedFKs[0] = true
+		}
+	}
+	for i := range nodes {
+		nodes[i].loadedFKs = loadedFKs
+	}
 	if err := sqlgraph.QueryNodes(ctx, gq.driver, _spec); err != nil {
 		return nil, err
 	}
@@ -719,6 +729,12 @@ func (gq *GroupQuery) sqlQuery(ctx context.Context) *sql.Selector {
 		selector.Limit(*limit)
 	}
 	return selector
+}
+
+// WithFKs configure the query to load the entities with their foreign-key columns.
+func (gq *GroupQuery) WithFKs() *GroupQuery {
+	gq.withFKs = true
+	return gq
 }
 
 // GroupGroupBy is the group-by builder for Group entities.

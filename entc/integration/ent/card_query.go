@@ -408,6 +408,16 @@ func (cq *CardQuery) sqlAll(ctx context.Context) ([]*Card, error) {
 		node.Edges.loadedTypes = loadedTypes
 		return node.assignValues(columns, values)
 	}
+	var loadedFKs [1]bool
+	for i := range _spec.Node.Columns {
+		switch _spec.Node.Columns[i] {
+		case card.ForeignKeys[0]:
+			loadedFKs[0] = true
+		}
+	}
+	for i := range nodes {
+		nodes[i].loadedFKs = loadedFKs
+	}
 	if err := sqlgraph.QueryNodes(ctx, cq.driver, _spec); err != nil {
 		return nil, err
 	}
@@ -588,6 +598,12 @@ func (cq *CardQuery) sqlQuery(ctx context.Context) *sql.Selector {
 		selector.Limit(*limit)
 	}
 	return selector
+}
+
+// WithFKs configure the query to load the entities with their foreign-key columns.
+func (cq *CardQuery) WithFKs() *CardQuery {
+	cq.withFKs = true
+	return cq
 }
 
 // CardGroupBy is the group-by builder for Card entities.

@@ -445,6 +445,20 @@ func (fq *FileQuery) sqlAll(ctx context.Context) ([]*File, error) {
 		node.Edges.loadedTypes = loadedTypes
 		return node.assignValues(columns, values)
 	}
+	var loadedFKs [3]bool
+	for i := range _spec.Node.Columns {
+		switch _spec.Node.Columns[i] {
+		case file.ForeignKeys[0]:
+			loadedFKs[0] = true
+		case file.ForeignKeys[1]:
+			loadedFKs[1] = true
+		case file.ForeignKeys[2]:
+			loadedFKs[2] = true
+		}
+	}
+	for i := range nodes {
+		nodes[i].loadedFKs = loadedFKs
+	}
 	if err := sqlgraph.QueryNodes(ctx, fq.driver, _spec); err != nil {
 		return nil, err
 	}
@@ -615,6 +629,12 @@ func (fq *FileQuery) sqlQuery(ctx context.Context) *sql.Selector {
 		selector.Limit(*limit)
 	}
 	return selector
+}
+
+// WithFKs configure the query to load the entities with their foreign-key columns.
+func (fq *FileQuery) WithFKs() *FileQuery {
+	fq.withFKs = true
+	return fq
 }
 
 // FileGroupBy is the group-by builder for File entities.

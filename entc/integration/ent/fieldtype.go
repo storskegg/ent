@@ -122,6 +122,7 @@ type FieldType struct {
 	// UUID holds the value of the "uuid" field.
 	UUID       uuid.UUID `json:"uuid,omitempty"`
 	file_field *int
+	loadedFKs  [1]bool
 }
 
 // scanValues returns the types for scanning values from sql.Rows.

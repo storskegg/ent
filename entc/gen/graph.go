@@ -330,6 +330,7 @@ func resolve(t *Type) error {
 			if ref.Type != t {
 				return fmt.Errorf("mismatch type for back-ref %q of %s.%s <-> %s.%s", e.Inverse, t.Name, e.Name, e.Type.Name, ref.Name)
 			}
+			e.Ref = ref
 			table := t.Table()
 			// Name the foreign-key column in a format that wouldn't change even if an inverse
 			// edge is dropped (or added). The format is: "<Edge-Owner>_<Edge-Name>".

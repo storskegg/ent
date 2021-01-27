@@ -406,6 +406,16 @@ func (nq *NodeQuery) sqlAll(ctx context.Context) ([]*Node, error) {
 		node.Edges.loadedTypes = loadedTypes
 		return node.assignValues(columns, values)
 	}
+	var loadedFKs [1]bool
+	for i := range _spec.Node.Columns {
+		switch _spec.Node.Columns[i] {
+		case node.ForeignKeys[0]:
+			loadedFKs[0] = true
+		}
+	}
+	for i := range nodes {
+		nodes[i].loadedFKs = loadedFKs
+	}
 	if err := sqlgraph.QueryNodes(ctx, nq.driver, _spec); err != nil {
 		return nil, err
 	}
@@ -550,6 +560,12 @@ func (nq *NodeQuery) sqlQuery(ctx context.Context) *sql.Selector {
 		selector.Limit(*limit)
 	}
 	return selector
+}
+
+// WithFKs configure the query to load the entities with their foreign-key columns.
+func (nq *NodeQuery) WithFKs() *NodeQuery {
+	nq.withFKs = true
+	return nq
 }
 
 // NodeGroupBy is the group-by builder for Node entities.

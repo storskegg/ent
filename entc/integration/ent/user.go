@@ -47,6 +47,7 @@ type User struct {
 	group_blocked *int
 	user_spouse   *int
 	user_parent   *int
+	loadedFKs     [3]bool
 }
 
 // UserEdges holds the relations/edges for other nodes in the graph.
@@ -418,6 +419,36 @@ func (u *User) String() string {
 	builder.WriteString(u.SSOCert)
 	builder.WriteByte(')')
 	return builder.String()
+}
+
+// SpouseID returns the foreign-key value of the "spouse" edge.
+// An error is returned if the foreign-key column was not loaded by the query or was not found.
+func (u *User) SpouseID() (id int, err error) {
+	if u.user_spouse != nil {
+		id = *u.user_spouse
+		return
+	}
+	if !u.loadedFKs[1] {
+		err = &NotLoadedError{edge: "spouse field"}
+	} else {
+		err = &NotFoundError{label: "spouse"}
+	}
+	return
+}
+
+// ParentID returns the foreign-key value of the "parent" edge.
+// An error is returned if the foreign-key column was not loaded by the query or was not found.
+func (u *User) ParentID() (id int, err error) {
+	if u.user_parent != nil {
+		id = *u.user_parent
+		return
+	}
+	if !u.loadedFKs[2] {
+		err = &NotLoadedError{edge: "parent field"}
+	} else {
+		err = &NotFoundError{label: "parent"}
+	}
+	return
 }
 
 // Users is a parsable slice of User.

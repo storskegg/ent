@@ -326,6 +326,16 @@ func (ftq *FieldTypeQuery) sqlAll(ctx context.Context) ([]*FieldType, error) {
 		node := nodes[len(nodes)-1]
 		return node.assignValues(columns, values)
 	}
+	var loadedFKs [1]bool
+	for i := range _spec.Node.Columns {
+		switch _spec.Node.Columns[i] {
+		case fieldtype.ForeignKeys[0]:
+			loadedFKs[0] = true
+		}
+	}
+	for i := range nodes {
+		nodes[i].loadedFKs = loadedFKs
+	}
 	if err := sqlgraph.QueryNodes(ctx, ftq.driver, _spec); err != nil {
 		return nil, err
 	}
@@ -416,6 +426,12 @@ func (ftq *FieldTypeQuery) sqlQuery(ctx context.Context) *sql.Selector {
 		selector.Limit(*limit)
 	}
 	return selector
+}
+
+// WithFKs configure the query to load the entities with their foreign-key columns.
+func (ftq *FieldTypeQuery) WithFKs() *FieldTypeQuery {
+	ftq.withFKs = true
+	return ftq
 }
 
 // FieldTypeGroupBy is the group-by builder for FieldType entities.

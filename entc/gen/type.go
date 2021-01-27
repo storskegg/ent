@@ -100,6 +100,9 @@ type (
 		Unique bool
 		// Inverse holds the name of the reference edge declared in the schema.
 		Inverse string
+		// Ref points to the reference edge. For Inverse/From edges, its points
+		// to the Assoc/To. For Assoc/To edges, it's nil.
+		Ref *Edge
 		// Owner holds the type of the edge-owner. For assoc-edges it's the
 		// type that holds the edge, for inverse-edges, it's the assoc type.
 		Owner *Type
@@ -1233,6 +1236,23 @@ func (e Edge) MutationCleared() string {
 		return pascal(e.Name) + "EdgeCleared"
 	}
 	return name
+}
+
+// ForeignKey returns the foreign-key of the inverse-field.
+func (e *Edge) ForeignKey() (*ForeignKey, error) {
+	if !e.OwnFK() {
+		return nil, fmt.Errorf("edge %q without foreign-key", e.Name)
+	}
+	owner := e.Owner
+	if e.IsInverse() {
+		owner = e.Ref.Type
+	}
+	for _, fk := range owner.ForeignKeys {
+		if fk.Edge == e.Ref || fk.Edge == e {
+			return fk, nil
+		}
+	}
+	return nil, fmt.Errorf("foreign-key was not found for edge %q", e.Name)
 }
 
 // setStorageKey sets the storage-key option in the schema or fail.

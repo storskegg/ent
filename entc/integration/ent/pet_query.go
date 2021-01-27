@@ -406,6 +406,18 @@ func (pq *PetQuery) sqlAll(ctx context.Context) ([]*Pet, error) {
 		node.Edges.loadedTypes = loadedTypes
 		return node.assignValues(columns, values)
 	}
+	var loadedFKs [2]bool
+	for i := range _spec.Node.Columns {
+		switch _spec.Node.Columns[i] {
+		case pet.ForeignKeys[0]:
+			loadedFKs[0] = true
+		case pet.ForeignKeys[1]:
+			loadedFKs[1] = true
+		}
+	}
+	for i := range nodes {
+		nodes[i].loadedFKs = loadedFKs
+	}
 	if err := sqlgraph.QueryNodes(ctx, pq.driver, _spec); err != nil {
 		return nil, err
 	}
@@ -547,6 +559,12 @@ func (pq *PetQuery) sqlQuery(ctx context.Context) *sql.Selector {
 		selector.Limit(*limit)
 	}
 	return selector
+}
+
+// WithFKs configure the query to load the entities with their foreign-key columns.
+func (pq *PetQuery) WithFKs() *PetQuery {
+	pq.withFKs = true
+	return pq
 }
 
 // PetGroupBy is the group-by builder for Pet entities.

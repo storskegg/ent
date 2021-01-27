@@ -115,6 +115,7 @@ var (
 		Paging,
 		Select,
 		Delete,
+		WithFKs,
 		Relation,
 		Predicate,
 		AddValues,
@@ -1350,6 +1351,29 @@ func CreateBulk(t *testing.T, client *ent.Client) {
 	require.Equal(t, users[1].ID, pets[1].QueryOwner().OnlyIDX(ctx))
 	require.Equal(t, "layla", pets[2].Name)
 	require.False(t, pets[2].QueryOwner().ExistX(ctx))
+}
+
+func WithFKs(t *testing.T, client *ent.Client) {
+	ctx := context.Background()
+	a8m := client.User.Create().SetAge(1).SetName("Ariel").SetNickname("Mashraki").SaveX(ctx)
+	pedro := client.Pet.Create().SetName("pedro").SetOwner(a8m).SaveX(ctx)
+	owner, err := pedro.OwnerID()
+	require.NoError(t, err)
+	require.Equal(t, a8m.ID, owner)
+
+	pedro = client.Pet.GetX(ctx, pedro.ID)
+	_, err = pedro.OwnerID()
+	require.Error(t, err)
+
+	pedro = client.Pet.Query().WithFKs().OnlyX(ctx)
+	owner1, err := pedro.OwnerID()
+	require.NoError(t, err)
+	require.Equal(t, a8m.ID, owner1)
+
+	pedro = client.Pet.Query().Select(pet.FieldName, pet.ForeignKeys...).OnlyX(ctx)
+	owner2, err := pedro.OwnerID()
+	require.NoError(t, err)
+	require.Equal(t, a8m.ID, owner2)
 }
 
 func drop(t *testing.T, client *ent.Client) {

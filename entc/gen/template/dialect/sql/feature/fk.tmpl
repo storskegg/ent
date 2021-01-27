@@ -1,0 +1,73 @@
+{{/*
+Copyright 2019-present Facebook Inc. All rights reserved.
+This source code is licensed under the Apache 2.0 license found
+in the LICENSE file in the root directory of this source tree.
+*/}}
+
+{{- define "dialect/sql/model/fields/fkloaded" }}
+    {{- if $.FeatureEnabled "sql/fks" }}
+        {{- with $.ForeignKeys }}
+            loadedFKs [{{ len . }}]bool
+        {{- end }}
+    {{- end }}
+{{- end }}
+
+{{- define "dialect/sql/query/spec/fkloaded" }}
+    {{- if $.FeatureEnabled "sql/fks" }}
+        {{- with $.ForeignKeys }}
+            var loadedFKs [{{ len . }}]bool
+            for i := range _spec.Node.Columns {
+                switch _spec.Node.Columns[i] {
+                    {{- range $i, $_ := . }}
+                        case {{ $.Package }}.ForeignKeys[{{ $i }}]:
+                            loadedFKs[{{ $i }}] = true
+                    {{- end }}
+                }
+            }
+            for i := range nodes {
+                nodes[i].loadedFKs = loadedFKs
+            }
+        {{- end }}
+    {{- end }}
+{{- end }}
+
+{{- define "dialect/sql/query/additional/withfks" }}
+    {{- if $.FeatureEnabled "sql/fks" }}
+        {{- with $.ForeignKeys }}
+            {{ $builder := pascal $.Scope.Builder }}
+            {{ $receiver := receiver $builder }}
+            // WithFKs configure the query to load the entities with their foreign-key columns.
+            func ({{ $receiver }} *{{ $builder }}) WithFKs() *{{ $builder }} {
+                {{ $receiver }}.withFKs = true
+                return {{ $receiver }}
+            }
+        {{- end }}
+    {{- end }}
+{{- end }}
+
+
+{{- define "dialect/sql/model/additional/fkgetter" }}
+    {{- if $.FeatureEnabled "sql/fks" }}
+        {{ $r := $.Receiver }}
+        {{- range $e := $.Edges }}
+            {{- if and $e.OwnFK }}
+                {{- $fk := $e.ForeignKey }}
+                {{- $idx := 0 }}{{ range $j, $e := $.ForeignKeys }}{{ if eq $e $fk }}{{ $idx = $j }}{{ end }}{{ end }}
+                // {{ $e.StructField }}ID returns the foreign-key value of the "{{ $e.Name }}" edge.
+                // An error is returned if the foreign-key column was not loaded by the query or was not found.
+                func ({{ $r }} *{{ $.Name }}) {{ $e.StructField }}ID() (id {{ $e.Type.ID.Type }}, err error) {
+                    if {{ $r }}.{{ $fk.Field.Name }} != nil {
+                        id = *{{ $r }}.{{ $fk.Field.Name }}
+                        return
+                    }
+                    if !{{ $r }}.loadedFKs[{{ $idx }}] {
+                        err = &NotLoadedError{edge: "{{ $e.Name }} field"}
+                    } else {
+                        err = &NotFoundError{label: "{{ $e.Name }}"}
+                    }
+                    return
+                }
+            {{- end }}
+        {{- end }}
+    {{- end }}
+{{- end }}

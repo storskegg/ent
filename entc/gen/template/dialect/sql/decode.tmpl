@@ -123,11 +123,3 @@ func ({{ $receiver }} *{{ $.Name }}) assignValues(columns []string, values []int
 
 {{ define "dialect/sql/decode/many" }}
 {{ end }}
-
-{{/* Additional fields for the generated model for holding the foreign-keys */}}
-{{ define "dialect/sql/model/fields" }}
-	{{- range $fk := $.ForeignKeys }}
-		{{- $f := $fk.Field }}
-		{{ $f.Name }} {{ if $f.Nillable }}*{{ end }}{{ $f.Type }}
-	{{- end }}
-{{ end }}

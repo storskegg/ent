@@ -35,6 +35,7 @@ type Group struct {
 	// The values are being populated by the GroupQuery when eager-loading is set.
 	Edges      GroupEdges `json:"edges"`
 	group_info *int
+	loadedFKs  [1]bool
 }
 
 // GroupEdges holds the relations/edges for other nodes in the graph.
@@ -229,6 +230,21 @@ func (gr *Group) String() string {
 	builder.WriteString(gr.Name)
 	builder.WriteByte(')')
 	return builder.String()
+}
+
+// InfoID returns the foreign-key value of the "info" edge.
+// An error is returned if the foreign-key column was not loaded by the query or was not found.
+func (gr *Group) InfoID() (id int, err error) {
+	if gr.group_info != nil {
+		id = *gr.group_info
+		return
+	}
+	if !gr.loadedFKs[0] {
+		err = &NotLoadedError{edge: "info field"}
+	} else {
+		err = &NotFoundError{label: "info"}
+	}
+	return
 }
 
 // Groups is a parsable slice of Group.
