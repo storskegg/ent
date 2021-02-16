@@ -1,8 +1,9 @@
-module entgo.io/ent
+module github.com/storskegg/ent
 
 go 1.15
 
 require (
+	entgo.io/ent v0.6.0
 	github.com/DATA-DOG/go-sqlmock v1.5.0
 	github.com/go-bindata/go-bindata v1.0.1-0.20190711162640-ee3c2418e368
 	github.com/go-openapi/inflect v0.19.0
