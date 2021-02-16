@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema"
-	"entgo.io/ent/schema/edge"
-	"entgo.io/ent/schema/mixin"
+	"github.com/storskegg/ent/schema"
+	"github.com/storskegg/ent/schema/edge"
+	"github.com/storskegg/ent/schema/mixin"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -38,8 +38,8 @@ import (
 	"time"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema/field"
-	"entgo.io/ent/schema/mixin"
+	"github.com/storskegg/ent/schema/field"
+	"github.com/storskegg/ent/schema/mixin"
 )
 
 // -------------------------------------------------
@@ -134,7 +134,7 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/mixin"
+	"github.com/storskegg/ent/schema/mixin"
 )
 
 type Pet struct {

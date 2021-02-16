@@ -12,12 +12,12 @@ import (
 	"fmt"
 	"math"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/examples/o2o2types/ent/card"
-	"entgo.io/ent/examples/o2o2types/ent/predicate"
-	"entgo.io/ent/examples/o2o2types/ent/user"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/examples/o2o2types/ent/card"
+	"github.com/storskegg/ent/examples/o2o2types/ent/predicate"
+	"github.com/storskegg/ent/examples/o2o2types/ent/user"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // CardQuery is the builder for querying Card entities.

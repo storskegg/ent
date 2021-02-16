@@ -10,15 +10,15 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect/gremlin"
-	"entgo.io/ent/dialect/gremlin/graph/dsl"
-	"entgo.io/ent/dialect/gremlin/graph/dsl/__"
-	"entgo.io/ent/dialect/gremlin/graph/dsl/g"
-	"entgo.io/ent/dialect/gremlin/graph/dsl/p"
-	"entgo.io/ent/entc/integration/gremlin/ent/file"
-	"entgo.io/ent/entc/integration/gremlin/ent/filetype"
-	"entgo.io/ent/entc/integration/gremlin/ent/predicate"
-	"entgo.io/ent/entc/integration/gremlin/ent/user"
+	"github.com/storskegg/ent/dialect/gremlin"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl/__"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl/g"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl/p"
+	"github.com/storskegg/ent/entc/integration/gremlin/ent/file"
+	"github.com/storskegg/ent/entc/integration/gremlin/ent/filetype"
+	"github.com/storskegg/ent/entc/integration/gremlin/ent/predicate"
+	"github.com/storskegg/ent/entc/integration/gremlin/ent/user"
 )
 
 // FileUpdate is the builder for updating File entities.

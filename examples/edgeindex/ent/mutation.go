@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"sync"
 
-	"entgo.io/ent/examples/edgeindex/ent/city"
-	"entgo.io/ent/examples/edgeindex/ent/predicate"
-	"entgo.io/ent/examples/edgeindex/ent/street"
+	"github.com/storskegg/ent/examples/edgeindex/ent/city"
+	"github.com/storskegg/ent/examples/edgeindex/ent/predicate"
+	"github.com/storskegg/ent/examples/edgeindex/ent/street"
 
 	"entgo.io/ent"
 )

@@ -11,13 +11,13 @@ import (
 	"fmt"
 	"sync"
 
-	"entgo.io/ent/entc/integration/migrate/entv2/car"
-	"entgo.io/ent/entc/integration/migrate/entv2/conversion"
-	"entgo.io/ent/entc/integration/migrate/entv2/customtype"
-	"entgo.io/ent/entc/integration/migrate/entv2/media"
-	"entgo.io/ent/entc/integration/migrate/entv2/pet"
-	"entgo.io/ent/entc/integration/migrate/entv2/predicate"
-	"entgo.io/ent/entc/integration/migrate/entv2/user"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/car"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/conversion"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/customtype"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/media"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/pet"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/predicate"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/user"
 
 	"entgo.io/ent"
 )

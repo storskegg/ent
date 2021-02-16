@@ -12,11 +12,11 @@ import (
 	"fmt"
 	"math"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/entc/integration/migrate/entv1/conversion"
-	"entgo.io/ent/entc/integration/migrate/entv1/predicate"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/entc/integration/migrate/entv1/conversion"
+	"github.com/storskegg/ent/entc/integration/migrate/entv1/predicate"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // ConversionQuery is the builder for querying Conversion entities.

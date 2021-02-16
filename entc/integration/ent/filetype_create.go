@@ -11,10 +11,10 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/entc/integration/ent/file"
-	"entgo.io/ent/entc/integration/ent/filetype"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/entc/integration/ent/file"
+	"github.com/storskegg/ent/entc/integration/ent/filetype"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // FileTypeCreate is the builder for creating a FileType entity.

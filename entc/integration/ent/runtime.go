@@ -10,15 +10,15 @@ import (
 	"net"
 	"time"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/entc/integration/ent/card"
-	"entgo.io/ent/entc/integration/ent/fieldtype"
-	"entgo.io/ent/entc/integration/ent/file"
-	"entgo.io/ent/entc/integration/ent/group"
-	"entgo.io/ent/entc/integration/ent/groupinfo"
-	"entgo.io/ent/entc/integration/ent/schema"
-	"entgo.io/ent/entc/integration/ent/task"
-	"entgo.io/ent/entc/integration/ent/user"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/entc/integration/ent/card"
+	"github.com/storskegg/ent/entc/integration/ent/fieldtype"
+	"github.com/storskegg/ent/entc/integration/ent/file"
+	"github.com/storskegg/ent/entc/integration/ent/group"
+	"github.com/storskegg/ent/entc/integration/ent/groupinfo"
+	"github.com/storskegg/ent/entc/integration/ent/schema"
+	"github.com/storskegg/ent/entc/integration/ent/task"
+	"github.com/storskegg/ent/entc/integration/ent/user"
 )
 
 // The init function reads all schema descriptors with runtime code

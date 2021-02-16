@@ -7,8 +7,8 @@
 package entv2
 
 import (
-	"entgo.io/ent/entc/integration/migrate/entv2/schema"
-	"entgo.io/ent/entc/integration/migrate/entv2/user"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/schema"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/user"
 )
 
 // The init function reads all schema descriptors with runtime code

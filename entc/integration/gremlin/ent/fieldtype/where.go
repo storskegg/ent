@@ -12,12 +12,12 @@ import (
 	"net/http"
 	"time"
 
-	"entgo.io/ent/dialect/gremlin/graph/dsl"
-	"entgo.io/ent/dialect/gremlin/graph/dsl/__"
-	"entgo.io/ent/dialect/gremlin/graph/dsl/p"
-	"entgo.io/ent/entc/integration/ent/role"
-	"entgo.io/ent/entc/integration/ent/schema"
-	"entgo.io/ent/entc/integration/gremlin/ent/predicate"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl/__"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl/p"
+	"github.com/storskegg/ent/entc/integration/ent/role"
+	"github.com/storskegg/ent/entc/integration/ent/schema"
+	"github.com/storskegg/ent/entc/integration/gremlin/ent/predicate"
 	"github.com/google/uuid"
 )
 

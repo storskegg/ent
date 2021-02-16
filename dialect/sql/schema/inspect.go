@@ -8,8 +8,8 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/dialect/sql"
 )
 
 // MigrateOption allows for managing schema configuration using functional options.

@@ -11,10 +11,10 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/examples/edgeindex/ent/city"
-	"entgo.io/ent/examples/edgeindex/ent/street"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/examples/edgeindex/ent/city"
+	"github.com/storskegg/ent/examples/edgeindex/ent/street"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // CityCreate is the builder for creating a City entity.

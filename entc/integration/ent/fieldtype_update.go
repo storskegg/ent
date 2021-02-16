@@ -13,13 +13,13 @@ import (
 	"net/http"
 	"time"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/entc/integration/ent/fieldtype"
-	"entgo.io/ent/entc/integration/ent/predicate"
-	"entgo.io/ent/entc/integration/ent/role"
-	"entgo.io/ent/entc/integration/ent/schema"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/entc/integration/ent/fieldtype"
+	"github.com/storskegg/ent/entc/integration/ent/predicate"
+	"github.com/storskegg/ent/entc/integration/ent/role"
+	"github.com/storskegg/ent/entc/integration/ent/schema"
+	"github.com/storskegg/ent/schema/field"
 	"github.com/google/uuid"
 )
 

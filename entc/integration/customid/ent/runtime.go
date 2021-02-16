@@ -7,11 +7,11 @@
 package ent
 
 import (
-	"entgo.io/ent/entc/integration/customid/ent/blob"
-	"entgo.io/ent/entc/integration/customid/ent/car"
-	"entgo.io/ent/entc/integration/customid/ent/mixinid"
-	"entgo.io/ent/entc/integration/customid/ent/pet"
-	"entgo.io/ent/entc/integration/customid/ent/schema"
+	"github.com/storskegg/ent/entc/integration/customid/ent/blob"
+	"github.com/storskegg/ent/entc/integration/customid/ent/car"
+	"github.com/storskegg/ent/entc/integration/customid/ent/mixinid"
+	"github.com/storskegg/ent/entc/integration/customid/ent/pet"
+	"github.com/storskegg/ent/entc/integration/customid/ent/schema"
 	"github.com/google/uuid"
 )
 

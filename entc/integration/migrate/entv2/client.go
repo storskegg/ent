@@ -11,19 +11,19 @@ import (
 	"fmt"
 	"log"
 
-	"entgo.io/ent/entc/integration/migrate/entv2/migrate"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/migrate"
 
-	"entgo.io/ent/entc/integration/migrate/entv2/car"
-	"entgo.io/ent/entc/integration/migrate/entv2/conversion"
-	"entgo.io/ent/entc/integration/migrate/entv2/customtype"
-	"entgo.io/ent/entc/integration/migrate/entv2/group"
-	"entgo.io/ent/entc/integration/migrate/entv2/media"
-	"entgo.io/ent/entc/integration/migrate/entv2/pet"
-	"entgo.io/ent/entc/integration/migrate/entv2/user"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/car"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/conversion"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/customtype"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/group"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/media"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/pet"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/user"
 
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
 )
 
 // Client is the client that holds all ent builders.

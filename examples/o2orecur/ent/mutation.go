@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"sync"
 
-	"entgo.io/ent/examples/o2orecur/ent/node"
-	"entgo.io/ent/examples/o2orecur/ent/predicate"
+	"github.com/storskegg/ent/examples/o2orecur/ent/node"
+	"github.com/storskegg/ent/examples/o2orecur/ent/predicate"
 
 	"entgo.io/ent"
 )

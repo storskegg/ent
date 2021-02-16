@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/entc/integration/migrate/entv2/conversion"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/entc/integration/migrate/entv2/conversion"
 )
 
 // Conversion is the model entity for the Conversion schema.

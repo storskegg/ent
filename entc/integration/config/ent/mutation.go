@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"sync"
 
-	"entgo.io/ent/entc/integration/config/ent/predicate"
-	"entgo.io/ent/entc/integration/config/ent/user"
+	"github.com/storskegg/ent/entc/integration/config/ent/predicate"
+	"github.com/storskegg/ent/entc/integration/config/ent/user"
 
 	"entgo.io/ent"
 )

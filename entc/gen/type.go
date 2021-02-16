@@ -18,10 +18,10 @@ import (
 	"unicode"
 
 	"entgo.io/ent"
-	"entgo.io/ent/dialect/entsql"
-	"entgo.io/ent/dialect/sql/schema"
-	"entgo.io/ent/entc/load"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/entsql"
+	"github.com/storskegg/ent/dialect/sql/schema"
+	"github.com/storskegg/ent/entc/load"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // The following types and their exported methods used by the codegen

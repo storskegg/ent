@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"sync"
 
-	"entgo.io/ent/examples/m2mbidi/ent/predicate"
-	"entgo.io/ent/examples/m2mbidi/ent/user"
+	"github.com/storskegg/ent/examples/m2mbidi/ent/predicate"
+	"github.com/storskegg/ent/examples/m2mbidi/ent/user"
 
 	"entgo.io/ent"
 )

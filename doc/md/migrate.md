@@ -231,7 +231,7 @@ import (
     "<project>/ent"
     "<project>/ent/migrate"
 
-    "entgo.io/ent/dialect/sql/schema"
+    "github.com/storskegg/ent/dialect/sql/schema"
 )
 
 func main() {

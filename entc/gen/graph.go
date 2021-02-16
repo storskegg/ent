@@ -17,9 +17,9 @@ import (
 	"runtime/debug"
 	"text/template/parse"
 
-	"entgo.io/ent/dialect/sql/schema"
-	"entgo.io/ent/entc/load"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql/schema"
+	"github.com/storskegg/ent/entc/load"
+	"github.com/storskegg/ent/schema/field"
 
 	"golang.org/x/tools/imports"
 )

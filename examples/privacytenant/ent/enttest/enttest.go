@@ -9,11 +9,11 @@ package enttest
 import (
 	"context"
 
-	"entgo.io/ent/examples/privacytenant/ent"
+	"github.com/storskegg/ent/examples/privacytenant/ent"
 	// required by schema hooks.
-	_ "entgo.io/ent/examples/privacytenant/ent/runtime"
+	_ "github.com/storskegg/ent/examples/privacytenant/ent/runtime"
 
-	"entgo.io/ent/dialect/sql/schema"
+	"github.com/storskegg/ent/dialect/sql/schema"
 )
 
 type (

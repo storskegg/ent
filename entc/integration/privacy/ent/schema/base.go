@@ -6,9 +6,9 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/entc/integration/privacy/ent/privacy"
-	"entgo.io/ent/entc/integration/privacy/rule"
-	"entgo.io/ent/schema/mixin"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/privacy"
+	"github.com/storskegg/ent/entc/integration/privacy/rule"
+	"github.com/storskegg/ent/schema/mixin"
 )
 
 // BaseMixin for all schemas.

@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/schema"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // Schema is the default implementation for the ent.Mixin interface.

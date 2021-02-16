@@ -10,9 +10,9 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/entc/integration/ent/goods"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/entc/integration/ent/goods"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // GoodsCreate is the builder for creating a Goods entity.

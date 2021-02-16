@@ -6,10 +6,10 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/examples/privacytenant/ent/privacy"
-	"entgo.io/ent/examples/privacytenant/rule"
-	"entgo.io/ent/schema/edge"
-	"entgo.io/ent/schema/mixin"
+	"github.com/storskegg/ent/examples/privacytenant/ent/privacy"
+	"github.com/storskegg/ent/examples/privacytenant/rule"
+	"github.com/storskegg/ent/schema/edge"
+	"github.com/storskegg/ent/schema/mixin"
 )
 
 // BaseMixin for all schemas in the graph.

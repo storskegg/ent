@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/examples/edgeindex/ent/city"
-	"entgo.io/ent/examples/edgeindex/ent/street"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/examples/edgeindex/ent/city"
+	"github.com/storskegg/ent/examples/edgeindex/ent/street"
 )
 
 // Street is the model entity for the Street schema.

@@ -11,10 +11,10 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/entc/integration/ent/schema"
-	"entgo.io/ent/entc/integration/ent/task"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/entc/integration/ent/schema"
+	"github.com/storskegg/ent/entc/integration/ent/task"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // TaskCreate is the builder for creating a Task entity.

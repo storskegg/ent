@@ -18,9 +18,9 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/dialect/entsql"
-	"entgo.io/ent/schema"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/entsql"
+	"github.com/storskegg/ent/schema"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // User holds the schema definition for the User entity.

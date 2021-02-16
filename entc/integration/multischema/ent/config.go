@@ -8,8 +8,8 @@ package ent
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/entc/integration/multischema/ent/internal"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/entc/integration/multischema/ent/internal"
 )
 
 // Option function to configure the client.

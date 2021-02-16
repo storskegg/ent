@@ -11,15 +11,15 @@ import (
 	"fmt"
 	"log"
 
-	"entgo.io/ent/entc/integration/privacy/ent/migrate"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/migrate"
 
-	"entgo.io/ent/entc/integration/privacy/ent/task"
-	"entgo.io/ent/entc/integration/privacy/ent/team"
-	"entgo.io/ent/entc/integration/privacy/ent/user"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/task"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/team"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/user"
 
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
 )
 
 // Client is the client that holds all ent builders.

@@ -11,13 +11,13 @@ import (
 	"fmt"
 	"log"
 
-	"entgo.io/ent/examples/o2obidi/ent/migrate"
+	"github.com/storskegg/ent/examples/o2obidi/ent/migrate"
 
-	"entgo.io/ent/examples/o2obidi/ent/user"
+	"github.com/storskegg/ent/examples/o2obidi/ent/user"
 
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
 )
 
 // Client is the client that holds all ent builders.

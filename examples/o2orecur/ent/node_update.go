@@ -10,11 +10,11 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/examples/o2orecur/ent/node"
-	"entgo.io/ent/examples/o2orecur/ent/predicate"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/examples/o2orecur/ent/node"
+	"github.com/storskegg/ent/examples/o2orecur/ent/predicate"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // NodeUpdate is the builder for updating Node entities.

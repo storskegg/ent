@@ -7,8 +7,8 @@
 package user
 
 import (
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/examples/privacyadmin/ent/predicate"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/examples/privacyadmin/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

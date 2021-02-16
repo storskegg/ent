@@ -7,7 +7,7 @@ package graph
 import (
 	"fmt"
 
-	"entgo.io/ent/dialect/gremlin/encoding/graphson"
+	"github.com/storskegg/ent/dialect/gremlin/encoding/graphson"
 
 	"github.com/pkg/errors"
 )

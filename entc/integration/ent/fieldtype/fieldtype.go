@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"net"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/entc/integration/ent/role"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/entc/integration/ent/role"
 )
 
 const (

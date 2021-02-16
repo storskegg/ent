@@ -8,8 +8,8 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/dialect/gremlin/graph/dsl"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl"
 )
 
 // Driver is a dialect.Driver implementation for TinkerPop gremlin.

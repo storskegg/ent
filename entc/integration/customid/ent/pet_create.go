@@ -10,11 +10,11 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/entc/integration/customid/ent/car"
-	"entgo.io/ent/entc/integration/customid/ent/pet"
-	"entgo.io/ent/entc/integration/customid/ent/user"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/entc/integration/customid/ent/car"
+	"github.com/storskegg/ent/entc/integration/customid/ent/pet"
+	"github.com/storskegg/ent/entc/integration/customid/ent/user"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // PetCreate is the builder for creating a Pet entity.

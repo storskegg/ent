@@ -8,7 +8,7 @@ import (
 	"errors"
 	"reflect"
 
-	"entgo.io/ent/schema"
+	"github.com/storskegg/ent/schema"
 )
 
 //go:generate go run internal/gen.go

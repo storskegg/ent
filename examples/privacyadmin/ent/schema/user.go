@@ -6,9 +6,9 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/examples/privacyadmin/ent/privacy"
-	"entgo.io/ent/examples/privacyadmin/rule"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/examples/privacyadmin/ent/privacy"
+	"github.com/storskegg/ent/examples/privacyadmin/rule"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // User holds the schema definition for the User entity.

@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/ent/entc/integration/customid/ent/blob"
+	"github.com/storskegg/ent/entc/integration/customid/ent/blob"
 	"github.com/google/uuid"
 )
 

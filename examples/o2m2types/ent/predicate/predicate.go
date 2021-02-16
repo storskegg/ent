@@ -7,7 +7,7 @@
 package predicate
 
 import (
-	"entgo.io/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql"
 )
 
 // Pet is the predicate function for pet builders.

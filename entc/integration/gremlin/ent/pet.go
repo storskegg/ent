@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/ent/dialect/gremlin"
-	"entgo.io/ent/entc/integration/gremlin/ent/user"
+	"github.com/storskegg/ent/dialect/gremlin"
+	"github.com/storskegg/ent/entc/integration/gremlin/ent/user"
 	"github.com/google/uuid"
 )
 

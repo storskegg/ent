@@ -8,7 +8,7 @@ import (
 	"fmt"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // Task holds the schema definition for the Task entity.

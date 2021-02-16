@@ -7,7 +7,7 @@
 package predicate
 
 import (
-	"entgo.io/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql"
 )
 
 // Blob is the predicate function for blob builders.

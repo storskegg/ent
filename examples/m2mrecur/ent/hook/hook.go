@@ -10,7 +10,7 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/examples/m2mrecur/ent"
+	"github.com/storskegg/ent/examples/m2mrecur/ent"
 )
 
 // The UserFunc type is an adapter to allow the use of ordinary

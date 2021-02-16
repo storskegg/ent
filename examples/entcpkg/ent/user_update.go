@@ -10,11 +10,11 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/examples/entcpkg/ent/predicate"
-	"entgo.io/ent/examples/entcpkg/ent/user"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/examples/entcpkg/ent/predicate"
+	"github.com/storskegg/ent/examples/entcpkg/ent/user"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // UserUpdate is the builder for updating User entities.

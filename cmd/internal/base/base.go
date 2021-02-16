@@ -17,10 +17,10 @@ import (
 	"text/template"
 	"unicode"
 
-	"entgo.io/ent/cmd/internal/printer"
-	"entgo.io/ent/entc"
-	"entgo.io/ent/entc/gen"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/cmd/internal/printer"
+	"github.com/storskegg/ent/entc"
+	"github.com/storskegg/ent/entc/gen"
+	"github.com/storskegg/ent/schema/field"
 
 	"github.com/spf13/cobra"
 )

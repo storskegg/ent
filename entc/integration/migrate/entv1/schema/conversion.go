@@ -6,7 +6,7 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // Conversion holds the schema definition for the Conversion entity.

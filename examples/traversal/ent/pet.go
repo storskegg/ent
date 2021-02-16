@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/examples/traversal/ent/pet"
-	"entgo.io/ent/examples/traversal/ent/user"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/examples/traversal/ent/pet"
+	"github.com/storskegg/ent/examples/traversal/ent/user"
 )
 
 // Pet is the model entity for the Pet schema.

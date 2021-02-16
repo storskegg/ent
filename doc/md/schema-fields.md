@@ -19,7 +19,7 @@ import (
 	"time"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // User schema.
@@ -67,7 +67,7 @@ import (
 
 	"github.com/google/uuid"
 	"entgo.io/ent"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // User schema.
@@ -173,8 +173,8 @@ package schema
 
 import (
     "entgo.io/ent"
-    "entgo.io/ent/dialect"
-    "entgo.io/ent/schema/field"
+    "github.com/storskegg/ent/dialect"
+    "github.com/storskegg/ent/schema/field"
 )
 
 // Card schema.
@@ -210,8 +210,8 @@ import (
     "database/sql"
 
     "entgo.io/ent"
-    "entgo.io/ent/dialect"
-    "entgo.io/ent/schema/field"
+    "github.com/storskegg/ent/dialect"
+    "github.com/storskegg/ent/schema/field"
 )
 
 // Amount is a custom Go type that's convertible to the basic float64 type.
@@ -248,8 +248,8 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/schema/field"
 	
 	"github.com/jackc/pgtype"
 )
@@ -313,7 +313,7 @@ import (
 	"time"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/schema/field"
 )
 
 

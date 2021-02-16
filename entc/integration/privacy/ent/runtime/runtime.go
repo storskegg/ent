@@ -9,13 +9,13 @@ package runtime
 import (
 	"context"
 
-	"entgo.io/ent/entc/integration/privacy/ent/schema"
-	"entgo.io/ent/entc/integration/privacy/ent/task"
-	"entgo.io/ent/entc/integration/privacy/ent/team"
-	"entgo.io/ent/entc/integration/privacy/ent/user"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/schema"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/task"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/team"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/user"
 
 	"entgo.io/ent"
-	"entgo.io/ent/privacy"
+	"github.com/storskegg/ent/privacy"
 )
 
 // The init function reads all schema descriptors with runtime code

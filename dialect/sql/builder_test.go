@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"entgo.io/ent/dialect"
+	"github.com/storskegg/ent/dialect"
 	"github.com/stretchr/testify/require"
 )
 

@@ -8,12 +8,12 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/entc/integration/hooks/ent/hook"
+	"github.com/storskegg/ent/entc/integration/hooks/ent/hook"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema/edge"
-	"entgo.io/ent/schema/field"
-	"entgo.io/ent/schema/mixin"
+	"github.com/storskegg/ent/schema/edge"
+	"github.com/storskegg/ent/schema/field"
+	"github.com/storskegg/ent/schema/mixin"
 )
 
 // User holds the schema definition for the User entity.

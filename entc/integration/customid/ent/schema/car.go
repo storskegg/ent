@@ -6,9 +6,9 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/edge"
-	"entgo.io/ent/schema/field"
-	"entgo.io/ent/schema/mixin"
+	"github.com/storskegg/ent/schema/edge"
+	"github.com/storskegg/ent/schema/field"
+	"github.com/storskegg/ent/schema/mixin"
 )
 
 type IDMixin struct {

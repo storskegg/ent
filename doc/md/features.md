@@ -27,8 +27,8 @@ import (
 	"log"
 	"text/template"
 
-	"entgo.io/ent/entc"
-	"entgo.io/ent/entc/gen"
+	"github.com/storskegg/ent/entc"
+	"github.com/storskegg/ent/entc/gen"
 )
 
 func main() {

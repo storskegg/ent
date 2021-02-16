@@ -20,7 +20,7 @@ import (
 	_ "{{ $.Config.Package }}/runtime"
 
 	{{ if $.SupportMigrate }}
-		"entgo.io/ent/dialect/sql/schema"
+		"github.com/storskegg/ent/dialect/sql/schema"
 	{{ end }}
 )
 

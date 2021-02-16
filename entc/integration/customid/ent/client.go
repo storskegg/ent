@@ -11,19 +11,19 @@ import (
 	"fmt"
 	"log"
 
-	"entgo.io/ent/entc/integration/customid/ent/migrate"
+	"github.com/storskegg/ent/entc/integration/customid/ent/migrate"
 	"github.com/google/uuid"
 
-	"entgo.io/ent/entc/integration/customid/ent/blob"
-	"entgo.io/ent/entc/integration/customid/ent/car"
-	"entgo.io/ent/entc/integration/customid/ent/group"
-	"entgo.io/ent/entc/integration/customid/ent/mixinid"
-	"entgo.io/ent/entc/integration/customid/ent/pet"
-	"entgo.io/ent/entc/integration/customid/ent/user"
+	"github.com/storskegg/ent/entc/integration/customid/ent/blob"
+	"github.com/storskegg/ent/entc/integration/customid/ent/car"
+	"github.com/storskegg/ent/entc/integration/customid/ent/group"
+	"github.com/storskegg/ent/entc/integration/customid/ent/mixinid"
+	"github.com/storskegg/ent/entc/integration/customid/ent/pet"
+	"github.com/storskegg/ent/entc/integration/customid/ent/user"
 
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
 )
 
 // Client is the client that holds all ent builders.

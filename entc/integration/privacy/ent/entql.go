@@ -7,15 +7,15 @@
 package ent
 
 import (
-	"entgo.io/ent/entc/integration/privacy/ent/predicate"
-	"entgo.io/ent/entc/integration/privacy/ent/task"
-	"entgo.io/ent/entc/integration/privacy/ent/team"
-	"entgo.io/ent/entc/integration/privacy/ent/user"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/predicate"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/task"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/team"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/user"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/entql"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/entql"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // schemaGraph holds a representation of ent/schema at runtime.

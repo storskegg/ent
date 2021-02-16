@@ -5,8 +5,8 @@
 package gremlin
 
 import (
-	"entgo.io/ent/dialect/gremlin/encoding/graphson"
-	"entgo.io/ent/dialect/gremlin/graph"
+	"github.com/storskegg/ent/dialect/gremlin/encoding/graphson"
+	"github.com/storskegg/ent/dialect/gremlin/graph"
 
 	"github.com/pkg/errors"
 )

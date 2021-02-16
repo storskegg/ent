@@ -13,10 +13,10 @@ import (
 	"time"
 
 	"entgo.io/ent"
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/entc/integration/ent/role"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/entc/integration/ent/role"
+	"github.com/storskegg/ent/schema/field"
 
 	"github.com/google/uuid"
 )

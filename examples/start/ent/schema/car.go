@@ -6,8 +6,8 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/edge"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/schema/edge"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // Car holds the schema definition for the Car entity.

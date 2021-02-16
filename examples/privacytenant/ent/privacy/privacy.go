@@ -10,10 +10,10 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/entql"
-	"entgo.io/ent/examples/privacytenant/ent"
+	"github.com/storskegg/ent/entql"
+	"github.com/storskegg/ent/examples/privacytenant/ent"
 
-	"entgo.io/ent/privacy"
+	"github.com/storskegg/ent/privacy"
 )
 
 var (

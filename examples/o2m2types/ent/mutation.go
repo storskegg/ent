@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"sync"
 
-	"entgo.io/ent/examples/o2m2types/ent/pet"
-	"entgo.io/ent/examples/o2m2types/ent/predicate"
-	"entgo.io/ent/examples/o2m2types/ent/user"
+	"github.com/storskegg/ent/examples/o2m2types/ent/pet"
+	"github.com/storskegg/ent/examples/o2m2types/ent/predicate"
+	"github.com/storskegg/ent/examples/o2m2types/ent/user"
 
 	"entgo.io/ent"
 )

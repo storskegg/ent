@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"strings"
 
-	"entgo.io/ent/dialect"
+	"github.com/storskegg/ent/dialect"
 )
 
 // Querier wraps the basic Query method that is implemented

@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"entgo.io/ent"
-	"entgo.io/ent/privacy"
+	"github.com/storskegg/ent/privacy"
 	"github.com/stretchr/testify/assert"
 )
 

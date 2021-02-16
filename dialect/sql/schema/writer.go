@@ -9,7 +9,7 @@ import (
 	"io"
 	"strings"
 
-	"entgo.io/ent/dialect"
+	"github.com/storskegg/ent/dialect"
 )
 
 // WriteDriver is a driver that writes all driver exec operations to its writer.

@@ -9,11 +9,11 @@ import (
 	"errors"
 	"testing"
 
-	"entgo.io/ent/entc/integration/privacy/ent/enttest"
-	"entgo.io/ent/entc/integration/privacy/ent/privacy"
-	"entgo.io/ent/entc/integration/privacy/ent/task"
-	"entgo.io/ent/entc/integration/privacy/rule"
-	"entgo.io/ent/entc/integration/privacy/viewer"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/enttest"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/privacy"
+	"github.com/storskegg/ent/entc/integration/privacy/ent/task"
+	"github.com/storskegg/ent/entc/integration/privacy/rule"
+	"github.com/storskegg/ent/entc/integration/privacy/viewer"
 
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/stretchr/testify/require"

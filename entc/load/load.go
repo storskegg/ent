@@ -24,7 +24,7 @@ import (
 	"time"
 
 	"entgo.io/ent"
-	"entgo.io/ent/entc/load/internal"
+	"github.com/storskegg/ent/entc/load/internal"
 
 	"golang.org/x/tools/go/packages"
 )

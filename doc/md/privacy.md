@@ -89,8 +89,8 @@ package main
 import (
     "log"
 
-    "entgo.io/ent/entc"
-    "entgo.io/ent/entc/gen"
+    "github.com/storskegg/ent/entc"
+    "github.com/storskegg/ent/entc/gen"
     "entgo.io/contrib/entgql"
 )
 
@@ -134,7 +134,7 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/examples/privacyadmin/ent/privacy"
+	"github.com/storskegg/ent/examples/privacyadmin/ent/privacy"
 )
 
 // User holds the schema definition for the User entity.
@@ -166,8 +166,8 @@ package rule
 import (
 	"context"
 
-	"entgo.io/ent/examples/privacyadmin/ent/privacy"
-	"entgo.io/ent/examples/privacyadmin/viewer"
+	"github.com/storskegg/ent/examples/privacyadmin/ent/privacy"
+	"github.com/storskegg/ent/examples/privacyadmin/viewer"
 )
 
 // DenyIfNoViewer is a rule that returns Deny decision if the viewer is

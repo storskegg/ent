@@ -12,7 +12,7 @@ import (
 	"sync"
 
 	"entgo.io/ent"
-	"entgo.io/ent/examples/entcpkg/ent/predicate"
+	"github.com/storskegg/ent/examples/entcpkg/ent/predicate"
 )
 
 const (

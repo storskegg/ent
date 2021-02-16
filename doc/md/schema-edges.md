@@ -20,7 +20,7 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/edge"
+	"github.com/storskegg/ent/schema/edge"
 )
 
 // User schema.
@@ -50,7 +50,7 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/edge"
+	"github.com/storskegg/ent/schema/edge"
 )
 
 // Pet holds the schema definition for the Pet entity.
@@ -96,7 +96,7 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/edge"
+	"github.com/storskegg/ent/schema/edge"
 )
 
 // Group schema.
@@ -125,7 +125,7 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/edge"
+	"github.com/storskegg/ent/schema/edge"
 )
 
 // User schema.

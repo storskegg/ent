@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/ent/dialect/gremlin"
+	"github.com/storskegg/ent/dialect/gremlin"
 )
 
 // Goods is the model entity for the Goods schema.

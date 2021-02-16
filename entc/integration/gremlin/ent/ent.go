@@ -13,10 +13,10 @@ import (
 	"strings"
 
 	"entgo.io/ent"
-	"entgo.io/ent/dialect/gremlin"
-	"entgo.io/ent/dialect/gremlin/encoding/graphson"
-	"entgo.io/ent/dialect/gremlin/graph/dsl"
-	"entgo.io/ent/dialect/gremlin/graph/dsl/__"
+	"github.com/storskegg/ent/dialect/gremlin"
+	"github.com/storskegg/ent/dialect/gremlin/encoding/graphson"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl/__"
 )
 
 // ent aliases to avoid import conflicts in user's code.

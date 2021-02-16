@@ -7,8 +7,8 @@ package sqlgraph
 import (
 	"fmt"
 
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/entql"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/entql"
 )
 
 type (

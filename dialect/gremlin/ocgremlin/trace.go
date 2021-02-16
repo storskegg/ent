@@ -8,7 +8,7 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect/gremlin"
+	"github.com/storskegg/ent/dialect/gremlin"
 
 	"go.opencensus.io/trace"
 )

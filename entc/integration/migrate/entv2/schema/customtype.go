@@ -6,8 +6,8 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // CustomType holds the schema definition for the CustomType entity.

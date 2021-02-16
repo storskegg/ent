@@ -10,10 +10,10 @@ import (
 	"reflect"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema"
-	"entgo.io/ent/schema/edge"
-	"entgo.io/ent/schema/field"
-	"entgo.io/ent/schema/index"
+	"github.com/storskegg/ent/schema"
+	"github.com/storskegg/ent/schema/edge"
+	"github.com/storskegg/ent/schema/field"
+	"github.com/storskegg/ent/schema/index"
 )
 
 // Schema represents an ent.Schema that was loaded from a complied user package.

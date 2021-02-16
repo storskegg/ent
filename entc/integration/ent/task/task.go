@@ -7,7 +7,7 @@
 package task
 
 import (
-	"entgo.io/ent/entc/integration/ent/schema"
+	"github.com/storskegg/ent/entc/integration/ent/schema"
 )
 
 const (

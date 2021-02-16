@@ -12,14 +12,14 @@ import (
 	"net/url"
 	"testing"
 
-	"entgo.io/ent/entc/integration/json/ent/schema"
+	"github.com/storskegg/ent/entc/integration/json/ent/schema"
 
-	"entgo.io/ent/dialect"
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqljson"
-	"entgo.io/ent/entc/integration/json/ent"
-	"entgo.io/ent/entc/integration/json/ent/migrate"
-	"entgo.io/ent/entc/integration/json/ent/user"
+	"github.com/storskegg/ent/dialect"
+	"github.com/storskegg/ent/dialect/sql"
+	"github.com/storskegg/ent/dialect/sql/sqljson"
+	"github.com/storskegg/ent/entc/integration/json/ent"
+	"github.com/storskegg/ent/entc/integration/json/ent/migrate"
+	"github.com/storskegg/ent/entc/integration/json/ent/user"
 
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"

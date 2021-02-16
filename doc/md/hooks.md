@@ -230,7 +230,7 @@ import (
 	"<project>/ent/hook"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema/mixin"
+	"github.com/storskegg/ent/schema/mixin"
 )
 
 

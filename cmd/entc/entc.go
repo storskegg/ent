@@ -10,8 +10,8 @@ import (
 	"log"
 	"path/filepath"
 
-	"entgo.io/ent/cmd/internal/base"
-	"entgo.io/ent/entc/gen"
+	"github.com/storskegg/ent/cmd/internal/base"
+	"github.com/storskegg/ent/entc/gen"
 
 	"github.com/spf13/cobra"
 )
@@ -30,11 +30,11 @@ func main() {
 func migrate(c *gen.Config) {
 	var (
 		target = filepath.Join(c.Target, "generate.go")
-		oldCmd = []byte("entgo.io/ent/cmd/entc")
+		oldCmd = []byte("github.com/storskegg/ent/cmd/entc")
 	)
 	buf, err := ioutil.ReadFile(target)
 	if err != nil || !bytes.Contains(buf, oldCmd) {
 		return
 	}
-	_ = ioutil.WriteFile(target, bytes.ReplaceAll(buf, oldCmd, []byte("entgo.io/ent/cmd/ent")), 0644)
+	_ = ioutil.WriteFile(target, bytes.ReplaceAll(buf, oldCmd, []byte("github.com/storskegg/ent/cmd/ent")), 0644)
 }

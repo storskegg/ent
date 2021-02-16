@@ -12,11 +12,11 @@ import (
 	"fmt"
 	"time"
 
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/entc/integration/ent/card"
-	"entgo.io/ent/entc/integration/ent/spec"
-	"entgo.io/ent/entc/integration/ent/user"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/entc/integration/ent/card"
+	"github.com/storskegg/ent/entc/integration/ent/spec"
+	"github.com/storskegg/ent/entc/integration/ent/user"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // CardCreate is the builder for creating a Card entity.

@@ -75,7 +75,7 @@ package schema
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/schema/field"
 )
 
 
@@ -214,7 +214,7 @@ import (
 	"regexp"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // Fields of the Car.
@@ -248,7 +248,7 @@ Let's add the `"cars"` edge to the `User` schema, and run `go generate ./ent`:
  	"log"
 
  	"entgo.io/ent"
- 	"entgo.io/ent/schema/edge"
+ 	"github.com/storskegg/ent/schema/edge"
  )
 
  // Edges of the User.
@@ -344,7 +344,7 @@ import (
 	"log"
 
 	"entgo.io/ent"
-	"entgo.io/ent/schema/edge"
+	"github.com/storskegg/ent/schema/edge"
 )
 
 // Edges of the Car.
@@ -406,7 +406,7 @@ relationship named `groups`. Let's define this relationship in our schemas:
 		"log"
 	
 		"entgo.io/ent"
-		"entgo.io/ent/schema/edge"
+		"github.com/storskegg/ent/schema/edge"
 	 )
 	
 	 // Edges of the Group.
@@ -423,7 +423,7 @@ relationship named `groups`. Let's define this relationship in our schemas:
 	 	"log"
 	
 	 	"entgo.io/ent"
-	 	"entgo.io/ent/schema/edge"
+	 	"github.com/storskegg/ent/schema/edge"
 	 )
 	
 	 // Edges of the User.

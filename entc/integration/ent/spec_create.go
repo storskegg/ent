@@ -10,10 +10,10 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect/sql/sqlgraph"
-	"entgo.io/ent/entc/integration/ent/card"
-	"entgo.io/ent/entc/integration/ent/spec"
-	"entgo.io/ent/schema/field"
+	"github.com/storskegg/ent/dialect/sql/sqlgraph"
+	"github.com/storskegg/ent/entc/integration/ent/card"
+	"github.com/storskegg/ent/entc/integration/ent/spec"
+	"github.com/storskegg/ent/schema/field"
 )
 
 // SpecCreate is the builder for creating a Spec entity.

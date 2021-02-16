@@ -6,7 +6,7 @@ package failure
 
 import (
 	"entgo.io/ent"
-	"entgo.io/ent/schema/edge"
+	"github.com/storskegg/ent/schema/edge"
 )
 
 type User struct {

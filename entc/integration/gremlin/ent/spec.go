@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/ent/dialect/gremlin"
+	"github.com/storskegg/ent/dialect/gremlin"
 )
 
 // Spec is the model entity for the Spec schema.

@@ -10,11 +10,11 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/ent/dialect/gremlin"
-	"entgo.io/ent/dialect/gremlin/graph/dsl"
-	"entgo.io/ent/dialect/gremlin/graph/dsl/g"
-	"entgo.io/ent/entc/integration/gremlin/ent/item"
-	"entgo.io/ent/entc/integration/gremlin/ent/predicate"
+	"github.com/storskegg/ent/dialect/gremlin"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl"
+	"github.com/storskegg/ent/dialect/gremlin/graph/dsl/g"
+	"github.com/storskegg/ent/entc/integration/gremlin/ent/item"
+	"github.com/storskegg/ent/entc/integration/gremlin/ent/predicate"
 )
 
 // ItemUpdate is the builder for updating Item entities.

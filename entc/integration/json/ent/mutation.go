@@ -14,9 +14,9 @@ import (
 	"net/url"
 	"sync"
 
-	"entgo.io/ent/entc/integration/json/ent/predicate"
-	"entgo.io/ent/entc/integration/json/ent/schema"
-	"entgo.io/ent/entc/integration/json/ent/user"
+	"github.com/storskegg/ent/entc/integration/json/ent/predicate"
+	"github.com/storskegg/ent/entc/integration/json/ent/schema"
+	"github.com/storskegg/ent/entc/integration/json/ent/user"
 
 	"entgo.io/ent"
 )
