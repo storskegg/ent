@@ -15,7 +15,7 @@ require (
 	github.com/lib/pq v1.9.0
 	github.com/mattn/go-sqlite3 v1.14.6
 	github.com/mitchellh/mapstructure v1.4.1
-	github.com/modern-go/reflect2 v1.0.1
+	github.com/modern-go/reflect2 v1.0.2
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.1.3
